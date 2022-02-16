@@ -5,6 +5,7 @@ const plotData = require("./plotdata.json");
 const requestListener = function (req, res) {
   if (req.url === "/plot" && req.method === "GET") {
     res.writeHead(200, {
+      "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
     });
     res.end(JSON.stringify(plotData));
